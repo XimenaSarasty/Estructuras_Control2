@@ -1,0 +1,90 @@
+Laura Ximena Limas Sarasty
+3/05/2023
+***************************************************************************
+Algoritmo ejercicio_1
+	definir num Como Entero
+	Escribir "Ingrese un numero: "
+	leer num
+	Mientras num>10 Hacer
+		Escribir "Ingrese otro numero: "
+		Leer num
+	Fin Mientras
+	Escribir "El numero es menor que 10"
+FinAlgoritmo
+***************************************************************************
+
+Algoritmo ejercicio_2
+	definir nummin, nummax, num, contador Como Entero
+	Escribir "Ingrese le numero minimo: "
+	leer nummin
+	Escribir "Ingrese el numero maximo: "
+	leer nummax
+	Escribir "Ingrese un numero dentro de este intervalo: "
+	Leer  num
+	contador=0
+	Mientras num>=nummin y num<=nummax Hacer
+		Escribir "Ingrese otro numero: "
+		leer num
+		contador=contador+1
+	Fin Mientras
+	Escribir "No está dentro del intervalo " contador
+FinAlgoritmo
+***************************************************************************
+
+Algoritmo ejercicio_3
+	Definir num1, num Como Real
+	Escribir "ingrese un numero: "
+	Leer num1
+	Escribir "Ingrese otro numero: "
+	Leer num
+	Mientras num > num1 Hacer
+		Escribir "digite otro numero: "
+		Leer num
+	Fin Mientras
+	Escribir "El numero es menor"
+FinAlgoritmo
+***************************************************************************
+
+Algoritmo ejercicio_4
+	definir nota, pract, teor, prob, prom_pract, prom_teor, prom_prob Como Real
+	definir nom Como Caracter
+	definir vacio Como Caracter
+	cadena = ""
+	Hacer
+		Escribir "Ingrese el nombre del alumno: "
+		leer nom
+
+	Si nom <> vacio Entonces
+		Escribir "Digite nota de practica: "
+		leer pract
+		escribir "Digite nota de problemas: "
+		leer prob
+		escribir "Digite nota de teoria: "
+		leer teor
+
+		Si (pract<=1 y pract>=10 y prob<=1 y prob>=10 y teor<=1 y teor>=10) Entonces
+		Mostrar "La nota que ingresaste esta fuera del rango de calificacion."
+	SiNo		
+		prom_pract = (pract*10)/100
+		prom_prob = (prob*50)/100
+		prom_teor = (teor*40)/100
+		
+		nota = prom_pract+prom_prob+prom_teor
+		Mostrar "La nota final de: " nom " es: " nota
+	FinSi
+FinSi
+Mientras Que nom <> " " 
+FinAlgoritmo
+***************************************************************************
+
+Algoritmo ejercicio_5
+	Definir num, operacion Como Entero
+	Escribir "Digite un numero entero positivo"
+	leer num
+	contador = 0
+	Mientras num >= 1 Hacer
+		num = trunc(num/10)
+		contador = contador +1 
+	FinMientras
+	Escribir "El numero tiene " contador " digitos."	
+FinAlgoritmo
